@@ -15,6 +15,6 @@ export const CONTENT_CARDS = [{
 {
     img: Resilience,
     title: "Engineered for resilience",
-    content: "Open Enterprise supports best practices in sociocratic management.",
+    content: "ZCex supports best practices in sociocratic management.",
 }
 ]

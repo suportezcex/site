@@ -1,5 +1,5 @@
 export const NAVBAR_TITLES = [
-        {text: "Why Open Enterprise", to: "/"}, 
+        {text: "Why ZCex", to: "/"}, 
         {text: "Features", to: "/features"},
         {text: "Contribute", to: "/contribute"}
 ]

@@ -39,7 +39,7 @@ export const CONTENT_INFO_CARD_1 ={
 export const CONTENT_INFO_BLOCK_2 = {
     img: Onboard,
     title: "Onboard users, investors and advisors as you grow",
-    content: "You've bootstrapped and delivered an MVP, and some investors and advisors are interested in having a chat with you. As an Open Enterprise, you can onboard them seamlessly into your digital organization and align them with your success."
+    content: "You've bootstrapped and delivered an MVP, and some investors and advisors are interested in having a chat with you. As an ZCex, you can onboard them seamlessly into your digital organization and align them with your success."
 }
 
 export const CONTENT_INFO_CARD_2 ={
@@ -58,12 +58,12 @@ export const CONTENT_INFO_CARD_2 ={
 export const CONTENT_INFO_BLOCK_3 = {
     img: Engage,
     title: "Engage highly committed contributors",
-    content: "You need talented people on-demand across various tasks that your full-time workforce can’t prioritize at the moment. As an Open Enterprise, you can easily fund tasks and have people apply to work on them in return for funds or shares."
+    content: "You need talented people on-demand across various tasks that your full-time workforce can’t prioritize at the moment. As an ZCex, you can easily fund tasks and have people apply to work on them in return for funds or shares."
 }
 
 export const CONTENT_INFO_CARD_3_A = {
-    articleTitle: "Write a how-to on Open Enterprise",
-    articleContent: "Looking for an amazing copywriter using Open Enterprise to help us write an article on how to get started.",
+    articleTitle: "Write a how-to on ZCex",
+    articleContent: "Looking for an amazing copywriter using ZCex to help us write an article on how to get started.",
     shareBtn: "1 SHARE"
 }
 

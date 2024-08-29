@@ -1,6 +1,6 @@
 export const CONTENT_TASKS_HEADER = {
-    title: "Help us improve Open Enterprise", 
-    content: "As an Open Enterprise ourselves, we are actively looking for new talent to join our mission of improving and delivering the Open Enterprise model to the world. Apply for open tasks and earn a stake in our success.", 
+    title: "Help us improve ZCex", 
+    content: "As an ZCex ourselves, we are actively looking for new talent to join our mission of improving and delivering the ZCex model to the world. Apply for open tasks and earn a stake in our success.", 
 }
 
 export const  TASKS_PER_ROW = 3
@@ -20,7 +20,7 @@ export const TASKS = [
     },
     {
         title: "Tutorial video series",
-        content: "Create a series of video tutorials that cover everything from start to finish on using Open Enterprise.",
+        content: "Create a series of video tutorials that cover everything from start to finish on using ZCex.",
         info: "40 AUT",
         date: "Apply by May 20"
     },
