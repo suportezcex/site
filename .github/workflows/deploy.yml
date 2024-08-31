@@ -22,7 +22,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18.x" # Defina a versão do Node.js aqui
+          node-version: "18.x"
+      
+      - name: Who am I (temp-set)
+        run: |
+          system('git config --global user.email "suportezcex@gmail.com")
+          system('git config --global user.name "Pipeline")
+        shell: Rscript {0}
 
       - name: Cache Node.js modules
         uses: actions/cache@v4
