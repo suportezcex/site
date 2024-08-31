@@ -74,9 +74,9 @@ const Navbar = () => {
             : "fixed left-[-100%]"
         }
       >
-        <Link to="/">
+        {/* <Link to="/">
           <img src={LogoNav} alt="logo" />
-        </Link>
+        </Link> */}
 
         {items.map(({ text, to }) => (
           <li className="p-4 border-b border-gray-600" key={idGenerator()}>
