@@ -11,9 +11,9 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav className="flex items-center justify-between mr-4 md:mr-14 w-[88%] lg:w-[90%] 2xl:w-[92%] absolute z-20">
-      <Link to="/site">
+      {/* <Link to="/site">
         {XCEZ}
-      </Link>
+      </Link> */}
       <ul
         className="
                   mt-[10px] mb-[9px] text-xs lg:text-base xl:text-xl font-medium font-figtree hidden 
