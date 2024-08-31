@@ -11,12 +11,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav className="flex items-center justify-between mr-4 md:mr-14 w-[88%] lg:w-[90%] 2xl:w-[92%] absolute z-20">
-      <Link to="/">
-        <img
-          className="w-[189px] md:w-[220px] lg:w-[281px] "
-          src={LogoNav}
-          alt="logo"
-        />
+      <Link to="/site">
+        {XCEZ}
       </Link>
       <ul
         className="
