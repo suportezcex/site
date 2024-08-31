@@ -1,6 +1,6 @@
 export const CONTENT_BOTTOM = {
-    title: "Start an ZCex", 
-    content: "If you can't wait to run a new or existing organization on ZCex and are willing to explore and navigate the beta, we'd love to get you started.", 
-    btn__text:"Request early access",
+    title: "Conheça mais da ZCex", 
+    content: "Quando se trata de criar uma plataforma de compra e venda de sucesso, você precisa de um time que compreenda seu mercado e suas necessidades. Nosso time de desenvolvimento é especialista em transformar ideias em produtos inovadores que conquistam clientes e geram resultados.", 
+    btn__text:"Solicitar acesso antecipado",
     btn__style: "request__btn"
 }

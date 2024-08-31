@@ -1,7 +1,7 @@
 export const NAVBAR_TITLES = [
-        {text: "Why ZCex", to: "/"}, 
-        {text: "Features", to: "/features"},
-        {text: "Contribute", to: "/contribute"}
+        {text: "ZCex Seu portal carbono 0", to: "/site"}, 
+        {text: "Compre Créditos", to: "/features"},
+        {text: "Venda Crédito", to: "/contribute"}
 ]
 
-export const NAV_REQUEST_BTN = {text: "Request early access"}
+export const NAV_REQUEST_BTN = {text: "Solicitar acesso antecipado"}
