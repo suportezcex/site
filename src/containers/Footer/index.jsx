@@ -9,7 +9,7 @@ const Footer = () => {
   const idGenerator = v4;
   return (
     <div className="flex items-start md:items-center justify-between mr-4 md:mr-14">
-      <Link className="pt-3 pb-[5px]" to="/">
+      <Link className="pt-3 pb-[5px]" to="/site">
         <img className="w-[154px]" src={LogoFooter} alt="logo" />
       </Link>
       <ul className="mt-[10px] mb-[9px] text-xs md:text-xl font-medium font-figtree flex flex-col md:flex-row gap-10">

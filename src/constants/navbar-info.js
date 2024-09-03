@@ -1,7 +1,7 @@
 export const NAVBAR_TITLES = [
   { text: "ZCex Seu portal carbono 0", to: "/site" },
-  { text: "Compre Créditos", to: "/features" },
-  { text: "Venda Crédito", to: "/contribute" },
+  { text: "Compre Créditos", to: "/site/features" },
+  { text: "Venda Crédito", to: "/site/contribute" },
 ];
 
 export const NAV_REQUEST_BTN = { text: "Solicitar acesso antecipado" };
