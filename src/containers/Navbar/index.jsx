@@ -1,4 +1,4 @@
-import LogoNav from "@assets/logo-navbar.svg";
+// import LogoNav from "@assets/logo-navbar.svg";
 import { NAVBAR_TITLES, NAV_REQUEST_BTN } from "@/constants";
 import { useState } from "react";
 import { v4 } from "uuid";
