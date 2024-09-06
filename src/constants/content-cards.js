@@ -2,19 +2,23 @@ import Workforce from "@assets/workforce-icon.svg";
 import Resilience from "@assets/resilience-icon.svg";
 import Meritocratic from "@assets/meritocratic-icon.svg";
 
-export const CONTENT_CARDS = [{
+export const CONTENT_CARDS = [
+  {
     img: Workforce,
-    title: "Modern workforce",
-    content: "Multistakeholder governance aligns employees with the organization's wider community.",
-},
-{
+    title: "Força de  trabalho moderna",
+    content:
+      "A governança multissetorial alinha os colaboradores com uma comunidade ampliada na organização.",
+  },
+  {
     img: Meritocratic,
-    title: "Meritocratic by design",
-    content: "Tokenized ownership aligns deeply committed individuals with the organization's success.",
-},
-{
+    title: "Meritocracia pelo design",
+    content:
+      "A propriedade tokenizada alinha indivíduos profundamente comprometidos com o sucesso da empreitada.",
+  },
+  {
     img: Resilience,
-    title: "Engineered for resilience",
-    content: "ZCex supports best practices in sociocratic management.",
-}
-]
+    title: "Projetado para resiliência",
+    content:
+      "O ZCex é apoiado nas melhores práticas de uma gestão sociocrática.",
+  },
+];

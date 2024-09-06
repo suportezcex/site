@@ -3,14 +3,14 @@
     flex-direction: row;
     align-items: center;
     padding: 20px 24px;
-    width: 219px;
+    width: 219;
     height: 64px;
     background: #71A894;
     border-radius: 8px;
 }
 
 .request__btn  span {
-    width: 171px;
+    width: 219;
     height: 24px;
     font-family: 'Figtree';
     font-style: normal;
