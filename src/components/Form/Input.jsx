@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useFormContext } from "react-hook-form";
 
-export function Input(props) {
+const Input = (props) => {
   const { register } = useFormContext();
 
   return (
@@ -11,4 +12,6 @@ export function Input(props) {
       {...props}
     />
   );
-}
+};
+
+export default Input;

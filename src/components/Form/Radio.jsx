@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useFormContext } from "react-hook-form";
 
-export function Radio(props) {
+const Radio = (props) => {
   const { register } = useFormContext();
   return (
     <div className="flex items-center">
@@ -20,4 +21,6 @@ export function Radio(props) {
       </label>
     </div>
   );
-}
+};
+
+export default Radio;

@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
+
 import { useFormContext } from "react-hook-form";
 import InputMask from "react-input-mask";
 
-export function Mask(props) {
+const Mask = (props) => {
   const { register } = useFormContext();
 
   return (
@@ -15,4 +17,6 @@ export function Mask(props) {
       {...props}
     />
   );
-}
+};
+
+export default Mask;

@@ -1,4 +1,6 @@
-export function Label(props) {
+/* eslint-disable react/prop-types */
+
+const Label = (props) => {
   return (
     <label
       className="font-figtree block text-sm font-medium leading-6 text-gray-900"
@@ -8,4 +10,6 @@ export function Label(props) {
       {props.required ? <span className="ml-1 text-red-700">*</span> : null}
     </label>
   );
-}
+};
+
+export default Label;

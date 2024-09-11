@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useFormContext } from "react-hook-form";
 
 export function YesOrNo(props) {
@@ -31,3 +32,5 @@ export function YesOrNo(props) {
     </div>
   );
 }
+
+export default YesOrNo;

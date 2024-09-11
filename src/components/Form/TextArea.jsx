@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useFormContext } from "react-hook-form";
 
 export function TextArea(props) {
@@ -12,3 +13,5 @@ export function TextArea(props) {
     />
   );
 }
+
+export default TextArea;

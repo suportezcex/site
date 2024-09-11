@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useFormContext } from "react-hook-form";
 
 function get(obj, path) {
@@ -15,7 +16,7 @@ function get(obj, path) {
   return result;
 }
 
-export function ErrorMessage({ field }) {
+const ErrorMessage = ({ field }) => {
   const {
     formState: { errors },
   } = useFormContext();
@@ -31,4 +32,6 @@ export function ErrorMessage({ field }) {
       {fieldError.message?.toString()}
     </span>
   );
-}
+};
+
+export default ErrorMessage;

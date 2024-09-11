@@ -11,7 +11,7 @@ const App = () => {
     <div className="pl-4 md:pl-14 py-3 md:py-10 bg-ghost-white">
       <Navbar />
       <Routes>
-        <Route index path="/site/" element={<Home />} />
+        <Route index path="/site" element={<Home />} />
         <Route path="/site/features" element={<Features />} />
         <Route path="/site/contribute" element={<Contribute />} />
         <Route path="*" element={<NoPage />} />
