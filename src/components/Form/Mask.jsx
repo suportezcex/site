@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useFormContext } from "react-hook-form";
 import InputMask from "react-input-mask";
 

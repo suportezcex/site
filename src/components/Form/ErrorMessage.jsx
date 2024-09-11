@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useFormContext } from "react-hook-form";
 
 function get(obj, path) {
