@@ -1,4 +1,4 @@
-import CheckBox from "./Checkbox";
+import CheckBox from "./CheckBox";
 import CpfCnpj from "./CpfCnpj";
 import ErrorMessage from "./ErrorMessage";
 import Field from "./Field";
