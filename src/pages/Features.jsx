@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,35 +13,30 @@ const Features = () => {
   const handleSendEmail = async () => {
     try {
       const response = await fetch(
-        "https://khbifbnzfdq4sd6czsulmeerge0zggya.lambda-url.us-east-2.on.aws/",
+        "https://leikk0yhba.execute-api.us-east-2.amazonaws.com/dev/submit-email",
         {
-          // Substitua pela URL do seu API Gateway
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*", // ou o domínio específico
-            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
           },
+          // body: JSON.stringify(values),
           body: JSON.stringify({
-            name: "Vinnie Alves",
-            email: "vinnie@phurshell.com",
+            name: "João Silva",
+            email: "joao@gmail.com",
             message: "Apenas um teste",
           }),
         }
       );
 
-      const data = await response.json();
+      await response.json();
 
       if (response.ok) {
-        console.log("Email enviado com sucesso:", data);
-        // Aqui você pode atualizar o estado do seu componente, mostrando uma mensagem de sucesso, por exemplo
+        alert("Dados enviado com sucesso");
       } else {
-        console.error("Erro ao enviar o email:", data);
-        // Aqui você pode atualizar o estado do seu componente, mostrando uma mensagem de erro, por exemplo
+        alert("Erro ao tentar enviar os dados.");
       }
     } catch (error) {
-      console.error("Erro ao tentar enviar os dados:", error);
-      // Aqui você pode lidar com erros de rede ou outras exceções
+      alert("Erro ao tentar enviar os dados.");
     }
   };
 
@@ -62,20 +58,18 @@ const Features = () => {
             content={"Mais de 100 créditos"}
           />
         </div>
-        {moreThan100 ? <MoreThan100Form /> : <LessThan100Form />}
-
-        <CustomButton
-          styleClass="profile__btn"
-          onClick={handleSendEmail}
-          content={"Email de teste"}
-        />
+        {moreThan100 ? (
+          <MoreThan100Form callback={(values) => handleSendEmail(values)} />
+        ) : (
+          <LessThan100Form callback={(values) => handleSendEmail(values)} />
+        )}
       </div>
     </div>
   );
 };
 export default Features;
 
-export const LessThan100Form = () => {
+export const LessThan100Form = (props) => {
   const validationLessThan100FormSchema = z.object({
     qty: z.coerce.number().min(1, "Campo obrigatório"),
     name: z.string().min(1, "Campo obrigatório"),
@@ -105,7 +99,7 @@ export const LessThan100Form = () => {
 
   const handleFormSubmit = (values) => {
     try {
-      console.log("OPA", values);
+      props.callback(values);
     } catch (error) {
       console.log(error);
     }
@@ -172,7 +166,7 @@ export const LessThan100Form = () => {
   );
 };
 
-export const MoreThan100Form = () => {
+export const MoreThan100Form = (props) => {
   const validationMoreThan100FormSchema = z.object({
     company_name: z.string().min(1, "Campo obrigatório"),
     phone: z.string().min(14, "Campo obrigatório"),
@@ -206,7 +200,7 @@ export const MoreThan100Form = () => {
 
   const handleFormSubmit = (values) => {
     try {
-      console.log("OPA", values);
+      props.callback(values);
     } catch (error) {
       console.log(error);
     }
