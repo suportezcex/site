@@ -1,25 +1,25 @@
 import { CONTENT_INFO_BLOCK_2, CONTENT_INFO_CARD_2 } from "@constants";
 import "./styles.css";
-import CustomButton from "@/components/CustomButton";
+// import CustomButton from "@/components/CustomButton";
 import CustomInfoParagraph from "@/components/CustomInfoParagraph";
 
 const Investor = () => {
   const { img, title, content } = CONTENT_INFO_BLOCK_2;
   const {
-    investorImg,
-    investorTitle,
-    subtitle,
-    investorContent,
-    commit,
-    commitValue,
-    shares,
-    numShares,
-    voteBtn,
-    voteBtnStyle,
+    // investorImg,
+    // investorTitle,
+    // subtitle,
+    // investorContent,
+    // commit,
+    // commitValue,
+    // shares,
+    // numShares,
+    // voteBtn,
+    // voteBtnStyle,
   } = CONTENT_INFO_CARD_2;
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-16 xl:gap-x-[178px]">
-      <div className="investor__card font-robotoMono grid justify-self-center md:flex md:flex-col gap-4 md:gap-8 lg:gap-24 xl:gap-12 2xl:gap-8 w-[85%] order-2 lg:order-1">
+      {/* <div className="investor__card font-robotoMono grid justify-self-center md:flex md:flex-col gap-4 md:gap-8 lg:gap-24 xl:gap-12 2xl:gap-8 w-[85%] order-2 lg:order-1">
         <div className="h-[260px] grid grid-cols-1 gap-y-0 md:gap-y-6">
           <div className="grid grid-cols-4 gap-x-2 md:gap-x-0">
             <img src={investorImg} alt={investorTitle} />
@@ -55,7 +55,8 @@ const Investor = () => {
           </div>
         </div>
         <CustomButton content={voteBtn} styleClass={voteBtnStyle} />
-      </div>
+      </div> */}
+      <div></div>
       <div className="order-1 lg:order-2">
         <CustomInfoParagraph img={img} title={title} content={content} />
       </div>

@@ -27,6 +27,9 @@ const Features = () => {
   return (
     <div className="flex justify-center mt-14 mr-4 md:mr-14 md:py-16 px-6 mr-4 md:px-14">
       <div className="columns-1 w-[50%]">
+        <h1 className="font-dmSerif  font-bold text-4xl mb-4 text-center mb-14">
+          Compre créditos
+        </h1>
         <h2 className="font-figtree font-bold text-lg mb-4 text-center">
           Opções de compra
         </h2>

@@ -1,17 +1,20 @@
-import { CONTENT_INFO_BLOCK_1, CONTENT_INFO_CARD_1 } from "@constants";
-import { v4 } from "uuid";
-import "./styles.css";
 import CustomInfoParagraph from "@/components/CustomInfoParagraph";
+import { CONTENT_INFO_BLOCK_1 } from "@constants";
+import "./styles.css";
+import { CONTENT_INFO_CARD_1 } from "@/constants";
+import { v4 } from "uuid";
 
 const Members = () => {
   const { img, title, content } = CONTENT_INFO_BLOCK_1;
   const items = CONTENT_INFO_CARD_1;
   const team = items.members;
   const idGenerator = v4;
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 lg:gap-x-[120px]">
       <CustomInfoParagraph img={img} title={title} content={content} />
-      <div className="members__card font-robotoMono w-[85%] md:w-[70%] lg:w-[85%]  justify-self-center lg:justify-self-start">
+      <div></div>
+      {/* <div className="members__card font-robotoMono w-[85%] md:w-[70%] lg:w-[85%]  justify-self-center lg:justify-self-start">
         <h5 className="font-bold text-dark-charcoal text-2xl lg:text-[32px] mb-[5%]">
           {items.title}
         </h5>
@@ -36,7 +39,7 @@ const Members = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

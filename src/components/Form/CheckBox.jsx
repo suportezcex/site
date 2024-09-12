@@ -5,7 +5,7 @@ const CheckBox = ({ options, name, ...props }) => {
   const { register } = useFormContext();
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center flex-wrap">
       {options.map((elem, index) => (
         <div className="flex items-center" key={index}>
           <input

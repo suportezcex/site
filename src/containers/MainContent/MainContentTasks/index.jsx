@@ -5,7 +5,7 @@ const MainContentTasks = () => {
   return (
     <div className="w-full">
       <MainContentTasksHeader />
-      <MainContentTasksCards />
+      {/* <MainContentTasksCards /> */}
     </div>
   );
 };

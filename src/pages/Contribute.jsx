@@ -51,77 +51,96 @@ const Contribute = () => {
   const options = [
     { key: "forest", value: "Floresta", label: "Floresta" },
     { key: "plantation", value: "Plantação", label: "Plantação" },
+    { key: "reserve", value: "Reserva", label: "Reserva" },
+    { key: "wind_energy", value: "Energia Eólica", label: "Energia Eólica" },
+    { key: "solar_energy", value: "Solar", label: "Solar" },
+    {
+      key: "biomass",
+      value: "Biomassa Renovável",
+      label: "Biomassa Renovável",
+    },
+    {
+      key: "avoided_methane",
+      value: "Metano Evitado",
+      label: "Metano Evitado",
+    },
+    { key: "others", value: "Outros", label: "Outros" },
   ];
 
   return (
     <div className="flex justify-center mt-14 mr-4 md:mr-14 md:py-16 px-6 mr-4 md:px-14">
-      <FormProvider {...createMoreThan100Form}>
-        <form onSubmit={handleSubmit(handleFormSubmit)} className="w-[50%]">
-          <Form.Field>
-            <Form.Label htmlFor="company_name" required>
-              NOME DA ORGANIZAÇÃO
-            </Form.Label>
-            <Form.Input type="text" name="company_name" />
-            <Form.ErrorMessage field="company_name" />
-          </Form.Field>
+      <div className="columns-1 w-[50%]">
+        <h1 className="font-dmSerif  font-bold text-4xl mb-4 text-center mb-14">
+          Venda créditos
+        </h1>
+        <FormProvider {...createMoreThan100Form}>
+          <form onSubmit={handleSubmit(handleFormSubmit)}>
+            <Form.Field>
+              <Form.Label htmlFor="company_name" required>
+                NOME DA ORGANIZAÇÃO
+              </Form.Label>
+              <Form.Input type="text" name="company_name" />
+              <Form.ErrorMessage field="company_name" />
+            </Form.Field>
 
-          <Form.Field>
-            <Form.Label htmlFor="name" required>
-              SEU NOME
-            </Form.Label>
-            <Form.Input type="text" name="name" />
-            <Form.ErrorMessage field="name" />
-          </Form.Field>
+            <Form.Field>
+              <Form.Label htmlFor="name" required>
+                SEU NOME
+              </Form.Label>
+              <Form.Input type="text" name="name" />
+              <Form.ErrorMessage field="name" />
+            </Form.Field>
 
-          <Form.Field>
-            <Form.Label htmlFor="email" required>
-              SEU E-MAIL
-            </Form.Label>
-            <Form.Input type="email" name="email" />
-            <Form.ErrorMessage field="email" />
-          </Form.Field>
+            <Form.Field>
+              <Form.Label htmlFor="email" required>
+                SEU E-MAIL
+              </Form.Label>
+              <Form.Input type="email" name="email" />
+              <Form.ErrorMessage field="email" />
+            </Form.Field>
 
-          <Form.Field>
-            <Form.Label htmlFor="phone">TELEFONE / WHATSAPP</Form.Label>
-            <Controller
-              render={({ field }) => (
-                <Form.Mask mask={"(99) 99999-9999"} {...field} />
-              )}
-              name="phone"
-              control={control}
-              defaultValue={""}
+            <Form.Field>
+              <Form.Label htmlFor="phone">TELEFONE / WHATSAPP</Form.Label>
+              <Controller
+                render={({ field }) => (
+                  <Form.Mask mask={"(99) 99999-9999"} {...field} />
+                )}
+                name="phone"
+                control={control}
+                defaultValue={""}
+              />
+              <Form.ErrorMessage field="phone" />
+            </Form.Field>
+
+            <Form.Field>
+              <Form.Label htmlFor="position">CARGO NA ORGANIZAÇÃO</Form.Label>
+              <Form.Input type="text" name="position" />
+              <Form.ErrorMessage field="position" />
+            </Form.Field>
+
+            <Form.Field>
+              <Form.Label htmlFor="types">Qual o tipo de projeto?</Form.Label>
+              <Form.CheckBox name="types" options={options} />
+              <Form.ErrorMessage field="types" />
+            </Form.Field>
+
+            <Form.Field>
+              <Form.Label htmlFor="details">
+                DESCREVA TODOS OS DETALHES TÉCNICOS
+              </Form.Label>
+              <Form.TextArea type="text" name="details" />
+              <Form.ErrorMessage field="details" />
+            </Form.Field>
+
+            <CustomButton
+              type="submit"
+              styleClass="profile__btn  mt-6"
+              content={"Enviar"}
+              loading={isSubmitting}
             />
-            <Form.ErrorMessage field="phone" />
-          </Form.Field>
-
-          <Form.Field>
-            <Form.Label htmlFor="position">CARGO NA ORGANIZAÇÃO</Form.Label>
-            <Form.Input type="text" name="position" />
-            <Form.ErrorMessage field="position" />
-          </Form.Field>
-
-          <Form.Field>
-            <Form.Label htmlFor="types">Qual o tipo de projeto?</Form.Label>
-            <Form.CheckBox name="types" options={options} />
-            <Form.ErrorMessage field="types" />
-          </Form.Field>
-
-          <Form.Field>
-            <Form.Label htmlFor="details">
-              DESCREVA TODOS OS DETALHES TÉCNICOS
-            </Form.Label>
-            <Form.TextArea type="text" name="details" />
-            <Form.ErrorMessage field="details" />
-          </Form.Field>
-
-          <CustomButton
-            type="submit"
-            styleClass="profile__btn  mt-6"
-            content={"Enviar"}
-            loading={isSubmitting}
-          />
-        </form>
-      </FormProvider>
+          </form>
+        </FormProvider>
+      </div>
     </div>
   );
 };
