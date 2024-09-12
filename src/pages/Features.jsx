@@ -1,42 +1,26 @@
 /* eslint-disable react/prop-types */
-import { FormProvider, useForm } from "react-hook-form";
+import { Controller, FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form } from "@/components/Form";
 import { useState } from "react";
 import { isValidCPF } from "@/helpers";
 import CustomButton from "@/components/CustomButton";
+import FormService from "@/services/FormService";
+
+const formService = new FormService();
 
 const Features = () => {
   const [moreThan100, setMoreThan100] = useState(false);
 
-  const handleSendEmail = async () => {
+  const handleSendEmail = async (values, reset) => {
     try {
-      const response = await fetch(
-        "https://leikk0yhba.execute-api.us-east-2.amazonaws.com/dev/submit-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          // body: JSON.stringify(values),
-          body: JSON.stringify({
-            name: "João Silva",
-            email: "joao@gmail.com",
-            message: "Apenas um teste",
-          }),
-        }
-      );
-
-      await response.json();
-
-      if (response.ok) {
-        alert("Dados enviado com sucesso");
-      } else {
-        alert("Erro ao tentar enviar os dados.");
-      }
+      const response = await formService.sendEmail(values);
+      alert(response.message);
     } catch (error) {
       alert("Erro ao tentar enviar os dados.");
+    } finally {
+      reset();
     }
   };
 
@@ -69,7 +53,7 @@ const Features = () => {
 };
 export default Features;
 
-export const LessThan100Form = (props) => {
+export const LessThan100Form = () => {
   const validationLessThan100FormSchema = z.object({
     qty: z.coerce.number().min(1, "Campo obrigatório"),
     name: z.string().min(1, "Campo obrigatório"),
@@ -94,14 +78,22 @@ export const LessThan100Form = (props) => {
 
   const {
     handleSubmit,
+    reset,
+    control,
     formState: { isSubmitting },
   } = createLessThan100Form;
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = async (values) => {
     try {
-      props.callback(values);
+      const response = await formService.sendEmail({
+        type: "buy_less_than_100",
+        ...values,
+      });
+      alert(response.message);
     } catch (error) {
-      console.log(error);
+      alert("Erro ao tentar enviar os dados.");
+    } finally {
+      reset();
     }
   };
 
@@ -136,7 +128,13 @@ export const LessThan100Form = (props) => {
           <Form.Label htmlFor="document" required>
             CPF ou CNPJ
           </Form.Label>
-          <Form.CpfCnpj name="document" />
+          <Controller
+            render={({ field }) => <Form.CpfCnpj {...field} />}
+            name="document"
+            control={control}
+            rules={{ required: true }}
+            defaultValue={""}
+          />
           <Form.ErrorMessage field="document" />
         </Form.Field>
         <Form.Field>
@@ -150,23 +148,30 @@ export const LessThan100Form = (props) => {
           <Form.Label htmlFor="phone" required>
             WHATSAPP
           </Form.Label>
-          <Form.Mask type="text" name="phone" mask={"(99) 99999-9999"} />
+          <Controller
+            render={({ field }) => (
+              <Form.Mask mask={"(99) 99999-9999"} {...field} />
+            )}
+            name="phone"
+            control={control}
+            rules={{ required: true }}
+            defaultValue={""}
+          />
           <Form.ErrorMessage field="phone" />
         </Form.Field>
 
-        <button
+        <CustomButton
           type="submit"
-          disabled={isSubmitting}
-          className="profile__btn mt-6"
-        >
-          <span>Comprar</span>
-        </button>
+          styleClass="profile__btn  mt-6"
+          content={"Comprar"}
+          loading={isSubmitting}
+        />
       </form>
     </FormProvider>
   );
 };
 
-export const MoreThan100Form = (props) => {
+export const MoreThan100Form = () => {
   const validationMoreThan100FormSchema = z.object({
     company_name: z.string().min(1, "Campo obrigatório"),
     phone: z.string().min(14, "Campo obrigatório"),
@@ -179,7 +184,7 @@ export const MoreThan100Form = (props) => {
     celphone: z.string(),
     position: z.string(),
     reasons: z.string(),
-    estimate: z.string(),
+    qty_estimate: z.string(),
     inventory: z.string(),
     consultancy: z.string(),
     company_details: z.string(),
@@ -195,14 +200,22 @@ export const MoreThan100Form = (props) => {
 
   const {
     handleSubmit,
+    reset,
+    control,
     formState: { isSubmitting },
   } = createMoreThan100Form;
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = async (values) => {
     try {
-      props.callback(values);
+      const response = await formService.sendEmail({
+        type: "buy_more_than_100",
+        ...values,
+      });
+      alert(response.message);
     } catch (error) {
-      console.log(error);
+      alert("Erro ao tentar enviar os dados.");
+    } finally {
+      reset();
     }
   };
 
@@ -221,7 +234,16 @@ export const MoreThan100Form = (props) => {
           <Form.Label htmlFor="phone" required>
             TELEFONE COMERCIAL
           </Form.Label>
-          <Form.Mask mask="(99) 99999-9999" type="text" name="phone" />
+
+          <Controller
+            render={({ field }) => (
+              <Form.Mask mask={"(99) 99999-9999"} {...field} />
+            )}
+            name="phone"
+            control={control}
+            rules={{ required: true }}
+            defaultValue={""}
+          />
           <Form.ErrorMessage field="phone" />
         </Form.Field>
 
@@ -249,7 +271,14 @@ export const MoreThan100Form = (props) => {
 
         <Form.Field>
           <Form.Label htmlFor="celphone">TELEFONE / WHATSAPP</Form.Label>
-          <Form.Mask mask="(99) 99999-9999" type="text" name="celphone" />
+          <Controller
+            render={({ field }) => (
+              <Form.Mask mask={"(99) 99999-9999"} {...field} />
+            )}
+            name="celphone"
+            control={control}
+            defaultValue={""}
+          />
           <Form.ErrorMessage field="celphone" />
         </Form.Field>
 
@@ -268,11 +297,11 @@ export const MoreThan100Form = (props) => {
         </Form.Field>
 
         <Form.Field>
-          <Form.Label htmlFor="estimate">
+          <Form.Label htmlFor="qty_estimate">
             POSSUI ESTIMATIVA DE QUANTIDADE A SER COMPRADA?
           </Form.Label>
-          <Form.Input type="text" name="estimate" />
-          <Form.ErrorMessage field="estimate" />
+          <Form.Input type="text" name="qty_estimate" />
+          <Form.ErrorMessage field="qty_estimate" />
         </Form.Field>
 
         <Form.Field>
@@ -301,13 +330,12 @@ export const MoreThan100Form = (props) => {
           <Form.ErrorMessage field="company_details" />
         </Form.Field>
 
-        <button
+        <CustomButton
           type="submit"
-          disabled={isSubmitting}
-          className="profile__btn mt-6"
-        >
-          <span>Enviar</span>
-        </button>
+          styleClass="profile__btn  mt-6"
+          content={"Enviar"}
+          loading={isSubmitting}
+        />
       </form>
     </FormProvider>
   );

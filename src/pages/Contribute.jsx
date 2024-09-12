@@ -1,9 +1,13 @@
-import { FormProvider, useForm } from "react-hook-form";
+import { Controller, FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form } from "@/components/Form";
+import FormService from "@/services/FormService";
+import CustomButton from "@/components/CustomButton";
 
 const Contribute = () => {
+  const formService = new FormService();
+
   const validationFormSchema = z.object({
     company_name: z.string().min(1, "Campo obrigatório"),
     name: z.string().min(1, "Campo obrigatório"),
@@ -23,14 +27,24 @@ const Contribute = () => {
 
   const {
     handleSubmit,
+    reset,
+    control,
     formState: { isSubmitting },
   } = createMoreThan100Form;
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = async (values) => {
     try {
-      console.log("OPA", values);
+      const response = await formService.sendEmail({ type: "sell", ...values });
+      alert(response.message);
+      // if (response.status) {
+      //   alert("Dados enviado com sucesso");
+      // } else {
+      //   alert("Erro ao tentar enviar os dados.");
+      // }
     } catch (error) {
-      console.log(error);
+      alert("Erro ao tentar enviar os dados.");
+    } finally {
+      reset();
     }
   };
 
@@ -69,7 +83,14 @@ const Contribute = () => {
 
           <Form.Field>
             <Form.Label htmlFor="phone">TELEFONE / WHATSAPP</Form.Label>
-            <Form.Mask mask="(99) 99999-9999" type="text" name="phone" />
+            <Controller
+              render={({ field }) => (
+                <Form.Mask mask={"(99) 99999-9999"} {...field} />
+              )}
+              name="phone"
+              control={control}
+              defaultValue={""}
+            />
             <Form.ErrorMessage field="phone" />
           </Form.Field>
 
@@ -93,13 +114,12 @@ const Contribute = () => {
             <Form.ErrorMessage field="details" />
           </Form.Field>
 
-          <button
+          <CustomButton
             type="submit"
-            disabled={isSubmitting}
-            className="profile__btn mt-6"
-          >
-            <span>Enviar</span>
-          </button>
+            styleClass="profile__btn  mt-6"
+            content={"Enviar"}
+            loading={isSubmitting}
+          />
         </form>
       </FormProvider>
     </div>
