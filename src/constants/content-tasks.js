@@ -1,7 +1,7 @@
 export const CONTENT_TASKS_HEADER = {
-  title: "Ajude-nos a melhorar o ZCex",
+  title: "NESTE CENÁRIO QUE SURGE A ZCEX, UMA PLATAFORMA QUE AJUDA A DESCARBONIZAÇÃO",
   content:
-    "Tal qual o ZCex, estamos ativamente buscando novos talentos para se juntar à nossa missão de melhorar e entregar esse modelo ZCex ao mercado. Candidate-se para tarefas abertas e ganhe uma participação em nosso sucesso.",
+    "Mas como isto funciona?",
 };
 
 export const TASKS_PER_ROW = 3;

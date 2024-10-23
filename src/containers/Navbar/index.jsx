@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between mr-4 md:mr-14 w-[88%] lg:w-[90%] 2xl:w-[92%] absolute z-20">
       <Link to="/site" className="md:text-3xl">
-        ZCex Seu portal carbono 0
+        ZCex Seu portal carbono ZERO
       </Link>
       <ul
         className="

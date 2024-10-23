@@ -12,9 +12,9 @@ import Star from "@assets/star.svg";
 
 export const CONTENT_INFO_BLOCK_1 = {
   img: Kickstart,
-  title: "Compartilhe esse desafio com seus fundadores",
+  title: "O MERCADO DE CARBONO",
   content:
-    "Estamos no início e você acabou de ter uma longa conversa com  amigos para um desafio significativo pelo qual todos são apaixonados e têm uma solução potencial. Você está pronto para embarcar na jornada dessa startup.",
+    "A necessidade de descarbonização levou a ONU, a criar a Convenção-Quadro das Nações Unidas sobre Mudança do Clima (UNFCCC), estabelecida em 1992 na Cúpula da Terra no Rio de Janeiro. As COPs (Conferencia das Partes), órgão máximo da Convenção, são reuniões anuais onde representantes de quase todos os países do mundo discutem e negociam ações para enfrentar as mudanças climáticasIPCC (Painel Intergovernamental sobre Mudanças Climáticas).",
 };
 
 export const CONTENT_INFO_CARD_1 = {
@@ -41,9 +41,9 @@ export const CONTENT_INFO_CARD_1 = {
 export const CONTENT_INFO_BLOCK_2 = {
   img: Onboard,
   title:
-    "A bordo estarão usuários, investidores e conselheiros à medida do crescimento da ideia",
+    "Origem do mercado de carbono",
   content:
-    "Você já iniciou o projeto e entregou um MVP, e alguns investidores e conselheiros estão interessados em conversar com você. Como um ZCex, você pode integrá-los de forma fluida à sua organização digital e alinhá-los ao seu sucesso.",
+    "Negociações climáticas internacionais nos anos 1990, com a criação do Protocolo de Quioto (COP-3), adotado em 1997 e em vigor a partir de 2005. Esse protocolo foi o primeiro acordo internacional a estabelecer metas legalmente vinculantes para a redução de emissões de gases de efeito estufa (GEE) para países industrializados.",
 };
 
 export const CONTENT_INFO_CARD_2 = {
@@ -62,9 +62,9 @@ export const CONTENT_INFO_CARD_2 = {
 
 export const CONTENT_INFO_BLOCK_3 = {
   img: Engage,
-  title: "Obtenha engajamento de colaboradores extremamente comprometidos",
+  title: "O Protocolo introduziu mecanismos de mercado, como:",
   content:
-    "Você precisa de pessoas talentosas sob demanda para diversas tarefas que uma equipe em tempo integral não pode priorizar de imediato. Com o ZCex, você pode facilmente financiar as tarefas e ter pessoas se candidatando para trabalhar nelas em troca de fundos ou ações.",
+    "Comércio de emissões: Permitia que países com metas de redução pudessem negociar créditos de carbono entre si.\nMecanismo de Desenvolvimento Limpo (MDL): Facilitava a transferência de créditos por meio de projetos de redução de emissões em países em desenvolvimento.\nO mercado de carbono significa colocar valor ($) nas atividades de descarbonização e assim incentivar o uso de tecnologias limpas e ao mesmo tempo financiá-las.\nNesta direção foram criados os “Certificados” comercializáveis, cada um com suas próprias regras, como Créditos de Carbono – de redução de emissões, I-RECs para energia elétrica, GAS-REC, para gás renovável e C-BIOS para combustíveis renováveis ",
 };
 
 export const CONTENT_INFO_CARD_3_A = {

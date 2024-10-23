@@ -16,7 +16,7 @@ const Footer = () => {
     <div className="flex items-start md:items-center justify-between mr-4 md:mr-14">
       <Link className="pt-3 pb-[5px] md:text-3xl" to="/site">
         {/* <img className="w-[154px]" src={LogoFooter} alt="logo" /> */}
-        ZCex Seu portal carbono 0
+        ZCex Seu portal carbono ZERO
       </Link>
 
       <ul className="mt-[10px] mb-[9px] text-xs md:text-xl font-medium font-figtree flex flex-col md:flex-row gap-10">
