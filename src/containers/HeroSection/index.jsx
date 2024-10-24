@@ -1,6 +1,6 @@
 import CustomButton from "@components/CustomButton";
 import { HERO_INFO } from "@/constants";
-// import HeroImg from "@assets/hero.svg";
+import HeroImg from "@assets/hero.svg";
 
 const HeroSection = () => {
   const { title, content, btn__text, btn__style } = HERO_INFO;
@@ -27,16 +27,16 @@ const HeroSection = () => {
         <p className="pt-5 pb-6 md:pt-11 md:pb-10 font-figtree font-normal text-base md:text-2xl">
           {content}
         </p>
-        {/* <div className="flex justify-center md:block">
+        <div className="flex justify-center md:block">
           <CustomButton content={btn__text} styleClass={btn__style} />
-        </div> */}
+        </div>
       </div>
       <div className="w-full justify-self-start 2xl:justify-self-center">
-        {/* <img
+        <img
           className="lg:-mt-[20%] mx-auto z-0 scale-[0.85] lg:scale-100"
           src={HeroImg}
           alt="Hero Image"
-        /> */}
+        />
       </div>
     </div>
   );

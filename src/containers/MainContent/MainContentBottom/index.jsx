@@ -1,6 +1,6 @@
 import CustomButton from "@/components/CustomButton";
 import { CONTENT_BOTTOM } from "@constants";
-// import ContentBottomImg from "@assets/content-bottom.svg";
+import ContentBottomImg from "@assets/content-bottom.svg";
 
 const MainContentBottom = () => {
   const { title, content, btn__text, btn__style } = CONTENT_BOTTOM;
@@ -32,11 +32,11 @@ const MainContentBottom = () => {
         </div> */}
       </div>
       <div className="w-full order-1 lg:order-2 flex justify-center">
-        {/* <img
+        <img
           className="h-[361px] mx-auto lg:mx-0"
           src={ContentBottomImg}
           alt="Bottom Image"
-        /> */}
+        />
       </div>
     </div>
   );

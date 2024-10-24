@@ -9,9 +9,17 @@ import JasonKwon from "@assets/Jason_Kwon.svg";
 import AlexRose from "@assets/Alex_Rose.svg";
 import LizzieUlrich from "@assets/Lizzie_Ulrich.svg";
 import Star from "@assets/star.svg";
+import Workforce from "@assets/workforce-icon.svg";
+import Meritocratic from "@assets/meritocratic-icon.svg";
+import ContentBottom from "@assets/content-bottom.svg";
+import ResilienceIcon from "@assets/resilience-icon.svg";
+import Hero from "@assets/hero.svg";
+import Como from "@assets/zcex_como.png";
+import Mercado from "@assets/zcex_mercado.png";
+
 
 export const CONTENT_INFO_BLOCK_1 = {
-  img: Kickstart,
+  img: Como,
   title: "O MERCADO DE CARBONO",
   content:
     "A necessidade de descarbonização levou a ONU, a criar a Convenção-Quadro das Nações Unidas sobre Mudança do Clima (UNFCCC), estabelecida em 1992 na Cúpula da Terra no Rio de Janeiro. As COPs (Conferencia das Partes), órgão máximo da Convenção, são reuniões anuais onde representantes de quase todos os países do mundo discutem e negociam ações para enfrentar as mudanças climáticasIPCC (Painel Intergovernamental sobre Mudanças Climáticas).",
@@ -39,7 +47,7 @@ export const CONTENT_INFO_CARD_1 = {
 };
 
 export const CONTENT_INFO_BLOCK_2 = {
-  img: Onboard,
+  img: Mercado,
   title:
     "Origem do mercado de carbono",
   content:
@@ -61,8 +69,8 @@ export const CONTENT_INFO_CARD_2 = {
 };
 
 export const CONTENT_INFO_BLOCK_3 = {
-  img: Engage,
-  title: "O Protocolo introduziu mecanismos de mercado, como:",
+  img: ContentBottom,
+  title: "O Protocolo introduziu mecanismos de mercado, como",
   content:
     "Comércio de emissões: Permitia que países com metas de redução pudessem negociar créditos de carbono entre si.\nMecanismo de Desenvolvimento Limpo (MDL): Facilitava a transferência de créditos por meio de projetos de redução de emissões em países em desenvolvimento.\nO mercado de carbono significa colocar valor ($) nas atividades de descarbonização e assim incentivar o uso de tecnologias limpas e ao mesmo tempo financiá-las.\nNesta direção foram criados os “Certificados” comercializáveis, cada um com suas próprias regras, como Créditos de Carbono – de redução de emissões, I-RECs para energia elétrica, GAS-REC, para gás renovável e C-BIOS para combustíveis renováveis ",
 };

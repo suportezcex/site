@@ -15,8 +15,8 @@ const Footer = () => {
   return (
     <div className="flex items-start md:items-center justify-between mr-4 md:mr-14">
       <Link className="pt-3 pb-[5px] md:text-3xl" to="/site">
-        {/* <img className="w-[154px]" src={LogoFooter} alt="logo" /> */}
-        ZCex Seu portal carbono ZERO
+        <img className="w-[154px]" src={LogoFooter} alt="logo" />
+        Seu portal carbono ZERO
       </Link>
 
       <ul className="mt-[10px] mb-[9px] text-xs md:text-xl font-medium font-figtree flex flex-col md:flex-row gap-10">
@@ -35,7 +35,7 @@ const Footer = () => {
       <a
         target="_blank"
         className="whatsapp-button mb-sm-0"
-        href="https://wa.me/5511999999999"
+        href="https://wa.me/5515996727211"
       >
         <img src={WhatappIcon} alt="" width={50} />
       </a>
