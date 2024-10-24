@@ -13,7 +13,6 @@ const Navbar = () => {
     <nav className="flex items-center justify-between mr-4 md:mr-14 w-[88%] lg:w-[90%] 2xl:w-[92%] absolute z-20">
       <Link to="/site" className="md:text-3xl">
         <img className="w-[154px]" src={LogoNav} alt="logo" />
-        Seu portal carbono ZERO
       </Link>
       <ul
         className="

@@ -19,6 +19,6 @@ export const CONTENT_CARDS = [
     img: Resilience,
     title: "Descarbonização",
     content:
-      "Deve ser objetivo de todas as atividades pois as atividades do homem vem aumentando drasticamente a concentração de carbono na atmosfera, desde a queima de combustíveis fósseis para a produção de calor, força motriz e eletricidade até as mudanças do uso da terra com a substituição de florestas e matas nativas por áreas para a agricultura e pecuária.",
+      "Deve ser objetivo de todas as atividades humanas, pois elas vem aumentando drasticamente a concentração de carbono na atmosfera, desde a queima de combustíveis fósseis para a produção de calor, força motriz e eletricidade até as mudanças do uso da terra com a substituição de florestas e matas nativas por áreas para a agricultura e pecuária.",
   },
 ];
