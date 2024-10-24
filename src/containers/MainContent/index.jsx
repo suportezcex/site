@@ -7,7 +7,7 @@ import MainContentBottom from "@containers/MainContent/MainContentBottom";
 const MainContent = () => {
   return (
     <div className="w-full pr-4 md:pr-14">
-      <MainContentHeader />
+      {/* <MainContentHeader /> */}
       <MainContentCards />
       <MainContentInfo />
       <MainContentTasks />
